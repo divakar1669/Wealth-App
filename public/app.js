@@ -37,7 +37,7 @@ function generateFooter(doc) {
 	.fontSize(
 		3,
 	).text(
-		'The Calculators are helpful for determining appropriate amounts, but they should not be relied upon solely for investment strategies. ]It is recommended to consult with an advisor or tax consultant before making any investment decisions.',
+		'The Calculators are helpful for determining appropriate amounts, but they should not be relied upon solely for investment strategies. It is recommended to consult with an advisor or tax consultant before making any investment decisions.',
 		90,
 		700,
 		{ align: 'center', width: 550},
