@@ -1,0 +1,152 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: wheat
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+header img {
+    margin-right: 10px;
+    height: 100px;
+    width: 400px;
+    transition: transform 0.2s ease-in-out;
+}
+
+header :hover {
+    transform: scale(1.1);
+}
+
+
+.header-buttons {
+    margin: 20px;
+    display: flex;
+    justify-content: right;
+    position: relative;
+    
+}
+
+.header-buttons h1
+{
+    justify-content:left;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    margin: 20px;
+}
+
+.header-button {
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: aquamarine;
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.3);
+}
+
+
+.wrapper {
+    margin: 20px;
+    min-height: 100%;
+    position: relative;
+}
+
+.content {
+    flex-grow: 1;
+    margin: 20px;
+    padding-bottom: 40px;
+}
+
+footer {
+    background-color: black;
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: large;
+}
+
+#DivGrowStamp {
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    position: relative;
+}
+
+.social {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    position: relative;
+
+}
+
+.social img {
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social img:hover {
+    transform: scale(1.1);
+
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 25px;
+}
+
+.image-container img {
+    width: 200px;
+    height: 200px;
+    margin: 40px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.image-container :hover img {
+    transform: scale(1.3);
+}
+
+.image-container .caption {
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.hide
+{
+    visibility: hidden;
+}
+h1,
+h2 {
+    margin: 30px;
+    text-align: center;
+}
