@@ -9,20 +9,20 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper ">
 
         <div>
             <header>
                 <div>
-                    <img src="./images/diva-invest-solutions-low-resolution-logo-white-on-black-background.png"
-                        alt="DIS">
+                    <a href="./home.html">  <img src="./images/diva-invest-solutions-low-resolution-logo-white-on-black-background.png"
+                        alt="DIS"></a>
                 </div>
             </header>
         </div>
 
-        <div class="content">
+        <div class="content hide">
             <div class="header-buttons">
-                <h1>Welcome to DIVA Invest Solutions</h1>
+                <h1>Goal Based Investment Plan </h1>
                 <button class="header-button hide">Login</button>
                 <button class="header-button hide">Sign up</button>
                 <button class="header-button hide">Sign out</button>
@@ -30,14 +30,35 @@
             <br>
             <h2 id = "goalName">  </h2>
         </div>
-        <div>
-
-            
-        <div>
-
-            
+        <div class="image-container">
+            <img src="./images/commingSoon.jpg" alt="" srcset=""  style="width: 1500px; height:1000px;">
         </div>
-            
+
+        <div class="hide">      
+            <div>
+                <label for="Name">Name </label>
+                <input type="alphabet" id="" name="">
+
+                <label for=""> </label>
+                <input type="number" id="" name="">
+
+                <label for=""> </label>
+                <input type="alphabet" id="" name="">
+
+                <label for=""> </label>
+                <input type="alphabet" id="" name="">
+
+                <label for="rows">Number of Rows:</label>
+                <input type="number" id="rows" name="rows">
+              </div>
+              <div>
+                <label for="columns">Number of Columns:</label>
+                <input type="number" id="columns" name="columns">
+              </div>
+              <button onclick="createTable()">Create Table</button>
+              <br>
+              <br>
+              <div id="tableContainer"></div>  
         </div>
     </div>
 
@@ -55,6 +76,7 @@
                     alt="gitHub"></a>
             <a href="https://twitter.com/divakar1669" target="_blank"> <img src="./images/Social/twitter.png"
                     alt="twitter"> </a>
+                    <a href="https://www.instagram.com/divakarthiyagarajen/" target="_blank"><img src="./images/Social/instagram.png" alt="instagram"></a>
         </div>
     </footer>
     <script src="script.js"></script>

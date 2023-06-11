@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="shortcut icon" href="./images/DIS_favicon.png" type="image/x-icon">
+  <title>DIS | Lump Sum Investment Calculator</title>
+</head>
+<body>
+
+  <div>
+
+    <div>
+      <header>
+          <div>
+            <a href="./home.html">  <img src="./images/diva-invest-solutions-low-resolution-logo-white-on-black-background.png"
+              alt="DIS"></a>
+          </div>
+      </header>
+  </div>
+
+    <h1>Lump Sum Investment Calculator</h1>
+  <div class="container">
+    <div class="box">
+      <label for="investmentAmount">Investment Amount (one time): <span id="investmentAmountValue"></span></label>
+      <input type="range" id="investmentAmountRange" min="500" max="10000000" step="1000" value="500" oninput="updateValue('investmentAmountRange')">
+      <input type="number" id="investmentAmount" value="500" onchange="updateValue('investmentAmount')">
+    
+      <label for="duration">Duration (in months): <span id="durationValue"></span></label>
+      <input type="range" id="durationRange" min="12" max="1200" step="12" value="24" oninput="updateValue('durationRange')">
+      <input type="number" id="duration" value="24" onchange="updateValue('duration')">
+    
+      <label for="expectedReturn">Expected Rate of Return (in %): <span id="expectedReturnValue"></span></label>
+      <input type="range" id="expectedReturnRange" min="0" max="20" step="0.1" value="10" oninput="updateValue('expectedReturnRange')">
+      <input type="number" id="expectedReturn" value="10" onchange="updateValue('expectedReturn')">
+    
+      <label for="inflationPercentage">Adjsut to Inflation (in %): <span id="inflationPercentageValue"></span></label>
+      <input type="range" id="inflationPercentageRange" min="0" max="10" step="1" value="0" oninput="updateValue('inflationPercentageRange')">
+      <input type="number" id="inflationPercentage" value="0" onchange="updateValue('inflationPercentage')">
+
+      <div class="hide">
+        <label for="increasePercentage">Step Up (in %): <span id="increasePercentageValue"></span></label>
+        <input type="range" id="increasePercentageRange" min="0" max="20" step="1" value="5" oninput="updateValue('increasePercentageRange')">
+        <input type="number" id="increasePercentage" value="0" onchange="updateValue('increasePercentage')">
+      </div>
+     
+      </div>
+
+      <div class="box">
+        <!-- Pie chart will be rendered here -->
+        <canvas id="chartContainer"></canvas>
+      </div>
+  </div>
+
+  <div>
+    <div class="container">
+        <div class="box">
+            <h2 >Maturity Amount</h2>   <h2 id="Maturity"></h2>
+        </div>
+        <div class="box operators ">
+          <h1></h1>  <h1> = </h1>
+        </div>
+        <div class="box">
+            <h2 >Principal Amount</h2>  <h2 id="Principal"></h2>
+        </div>
+        <div  class="box operators" >
+          <h1></h1>  <h1> + </h1>
+        </div>
+        <div class="box">
+            <h2 >Interest Amount</h2>  <h2 id="Intrest"></h2>
+        </div>
+    </div>
+    <div id="result">
+        <!-- SIP calculation results will be displayed here -->
+      </div>
+  </div>
+
+
+  </div>
+
+  <footer>
+    <p>&copy; 2023 || Diva Invest Solutions || All rights reserved.</p>
+    <div>
+        <img src="./images/logo-white.png" id="DivGrowStamp" alt="DIS"  onclick="printAsPDF()">
+    </div>
+    <div class="social">
+        <a href="mailto:divakar1669@gmail.com" target="_blank"> <img src="./images/Social/email.png"
+                alt="email"></a>
+        <a href="https://www.linkedin.com/in/divakart" target="_blank"> <img src="./images/Social/linkedin .png"
+                alt="linkedin"> </a>
+        <a href="https://github.com/divakar1669" target="_blank"> <img src="./images/Social/github.png"
+                alt="gitHub"></a>
+        <a href="https://twitter.com/divakar1669" target="_blank"> <img src="./images/Social/twitter.png"
+                alt="twitter"> </a>
+        <a href="https://www.instagram.com/divakarthiyagarajen/" target="_blank"><img src="./images/Social/instagram.png" alt="instagram"></a>
+    </div>
+</footer>
+  <script src="./lumpSum.js"></script>
+</body>
+</html>

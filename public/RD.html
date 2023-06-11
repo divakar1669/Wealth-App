@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DIS | RD Calculator</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="shortcut icon" href="./images/DIS_favicon.png" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+
+    <div class="wrapper">
+        <div>
+            <header>
+              <div>
+                <a href="./home.html"> <img
+                    src="./images/diva-invest-solutions-low-resolution-logo-white-on-black-background.png" alt="DIS"></a>
+              </div>
+            </header>
+
+            <div>
+                <h1>Recurring Deposit Calculator</h1>
+                <div class="container">
+                    <div class="box">
+                        <div class="">
+
+                            <label for="monthlyAmount">Monthly Deposit Amount:<span id="monthlyAmountValue"></span></label>
+                            <input type="range" id="monthlyAmountRange" min="500" max="10000000" step="100" value="500"oninput="updateValue('monthlyAmountRange')">
+                            <input type="number" id="monthlyAmount" value="500" onchange="updateValue('monthlyAmount')">
+
+                            <label for="interest">Interest Rate (%):<span id="interestValue"></span></label>
+                            <input type="range" id="interestRange" min="0" max="30" step="1" value="5"oninput="updateValue('interestRange')">
+                            <input type="number" id="interest" value="5" onchange="updateValue('interest')">
+
+                            <label for="tenure">Tenure (in months):<span id="tenuretValue"></span></label>
+                            <input type="range" id="tenureRange" min="1" max="100" step="1" value="6" oninput="updateValue('tenureRange')">
+                            <input type="number" id="tenure" value="6" onchange="updateValue('tenure')">
+
+                            <label for="inflationPercentage">Adjsut to Inflation (in %): <span id="inflationPercentageValue"></span></label>
+                            <input type="range" id="inflationPercentageRange" min="0" max="10" step="1" value="0" oninput="updateValue('inflationPercentageRange')">
+                            <input type="number" id="inflationPercentage" value="0" onchange="updateValue('inflationPercentage')">
+
+                          </div>
+                          <div id="result">
+                            <div class="container">
+                              <div class="box">
+                                  <h2 >Maturity Amount</h2>   <h2 id="Maturity"></h2>
+                              </div>
+                              <div class="box">
+                                  <h2 >Interest Amount</h2>  <h2 id="Intrest"></h2>
+                              </div>
+                          </div>
+                          </div>
+                    </div>
+                    <div class="box">
+                        <div id="chartContainer">
+                            <canvas id="chart"></canvas>
+                          </div>
+                    </div>
+                </div>
+
+               
+
+            </div>
+          </div>
+          <footer>
+            <p>&copy; 2023 || Diva Invest Solutions || All rights reserved.</p>
+            <div>
+              <img src="./images/logo-white.png" id="DivGrowStamp" alt="DIS" onclick="printAsPDF()">
+            </div>
+            <div class="social">
+              <a href="mailto:divakar1669@gmail.com" target="_blank"> <img src="./images/Social/email.png" alt="email"></a>
+              <a href="https://www.linkedin.com/in/divakart" target="_blank"> <img src="./images/Social/linkedin .png"
+                  alt="linkedin"> </a>
+              <a href="https://github.com/divakar1669" target="_blank"> <img src="./images/Social/github.png"
+                  alt="gitHub"></a>
+              <a href="https://twitter.com/divakar1669" target="_blank"> <img src="./images/Social/twitter.png" alt="twitter">
+              </a>
+              <a href="https://www.instagram.com/divakarthiyagarajen/" target="_blank"><img
+                  src="./images/Social/instagram.png" alt="instagram"></a>
+            </div>
+          </footer>
+
+    </div>
+  <script src="./rd.js"></script>
+</body>
+</html>

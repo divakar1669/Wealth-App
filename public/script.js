@@ -40,11 +40,37 @@ document.getElementById('generateBtn').addEventListener('click', () => {
   {
     var el = getResourceName(num);
     window.location.href ="./calculate.html"
-    
+
   }
 
 
+    function createTable() {
+      var rows = parseInt(document.getElementById("rows").value);
+      var columns = parseInt(document.getElementById("columns").value);
+      var tableContainer = document.getElementById("tableContainer");
 
+      // Clear the table container
+      tableContainer.innerHTML = "";
+
+      // Create the table element
+      var table = document.createElement("table");
+      // Create table rows and cells based on user input
+      for (var i = 1; i < rows; i++) {
+        var row = document.createElement("tr");
+
+        for (var j = 0; j < columns; j++) {
+          var cell = document.createElement(i === 0 ? "th" : "td");
+          var cellText = document.createTextNode(i === 0 ? "Header " + (j + 1) : "Row " + i + ", Col " + j);
+          cell.appendChild(cellText);
+          row.appendChild(cell);
+        }
+
+        table.appendChild(row);
+      }
+
+      // Append the table to the table container
+      tableContainer.appendChild(table);
+    }
 
   
   
