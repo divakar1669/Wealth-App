@@ -76,7 +76,7 @@ function generateContentIntrustion(doc) {
 }
 
 function generateHeader(doc) {
-	doc.image('./diva-invest-solutions-low-resolution-color-logo.png', 50, 50, { width: 100 })
+	doc.image('./public/diva-invest-solutions-low-resolution-color-logo.png', 50, 50, { width: 100 })
 		.fillColor('#444444')
 		.moveDown();
 }
