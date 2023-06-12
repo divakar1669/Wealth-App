@@ -2,7 +2,7 @@ document.getElementById('generateBtn').addEventListener('click', () => {
     const value1 = document.getElementById('value1').value;
     const value2 = document.getElementById('value2').value;
   
-    const url = `http://localhost:3000/generate-pdf?value1=${encodeURIComponent(value1)}&value2=${encodeURIComponent(value2)}`;
+    const url = `http://localhost:9000/generate-pdf?value1=${encodeURIComponent(value1)}&value2=${encodeURIComponent(value2)}`;
     window.open(url, '_blank');
   });
 

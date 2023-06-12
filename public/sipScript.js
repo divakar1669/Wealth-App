@@ -146,7 +146,7 @@ JsonFileToPrint = jsonString;
 function printAsPDF()
 {
 const encodedData = encodeURIComponent(JsonFileToPrint); 
-const url = `http://localhost:3000/generate-pdf/endpoint?data=${encodedData}`;
+const url = `http://localhost:9000/generate-pdf/endpoint?data=${encodedData}`;
 window.open(url, '_blank');
 }
 
